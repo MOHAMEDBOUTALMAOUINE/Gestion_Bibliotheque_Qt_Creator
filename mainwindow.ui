@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>877</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Bibliothèque</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow {
+        background-color: #f8f9fa;
+    }
+    QGroupBox {
+        background-color: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    QGroupBox::title {
+        subcontrol-origin: margin;
+        subcontrol-position: top center;
+        padding: 0 5px;
+        background-color: #e9ecef;
+        border-radius: 8px;
+        font-weight: bold;
+        color: #000000;
+    }
+    QLabel {
+        color: #495057;
+        font-size: 14px;
+        padding: 2px 0;
+    }
+    QLineEdit {
+        background-color: #ffffff;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding: 8px;
+        font-size: 14px;
+    }
+    QPushButton {
+        background-color: #5dade2;
+        color: #000000;
+        border: 1px solid #5dade2;
+        border-radius: 5px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    QPushButton:hover {
+        background-color: #3498db;
+    }
+    QPushButton:pressed {
+        background-color: #2980b9;
+    }
+    QTableWidget {
+        background-color: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+    }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="livreGroupBox">
+      <property name="title">
+       <string>Informations du Livre</string>
+      </property>
+      <layout class="QFormLayout" name="formLayoutLivre">
+       <item row="0" column="0">
+        <widget class="QLabel" name="idLabel">
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="idLineEdit"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="titreLabel">
+         <property name="text">
+          <string>Titre</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="titreLineEdit"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="auteurLabel">
+         <property name="text">
+          <string>Auteur</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="auteurLineEdit"/>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayoutLivre">
+         <item>
+          <widget class="QPushButton" name="ajouterButton">
+           <property name="text">
+            <string>Ajouter</string>
+           </property>
+           <property name="icon">
+            <iconset>
+            <normaloff>C:/Users/MOHA BOUTA/OneDrive - uca.ac.ma/Bureau/algotithme_project/img/add_icon.png</normaloff>
+            </iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="supprimerButton">
+           <property name="text">
+            <string>Supprimer</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>C:/Users/MOHA BOUTA/OneDrive - uca.ac.ma/Bureau/algotithme_project/img/delete_icon.png</normaloff>
+            </iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="emprunterButton">
+           <property name="text">
+            <string>Emprunter</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>C:/Users/MOHA BOUTA/OneDrive - uca.ac.ma/Bureau/algotithme_project/img/borrow_icon.png</normaloff>
+            </iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="retournerButton">
+           <property name="text">
+            <string>Retourner</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>C:/Users/MOHA BOUTA/OneDrive - uca.ac.ma/Bureau/algotithme_project/img/return_icon.png</normaloff>
+            </iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="rechercheGroupBox">
+      <property name="title">
+       <string>Recherche de Livre</string>
+      </property>
+      <layout class="QFormLayout" name="formLayoutRecherche">
+       <item row="0" column="0">
+        <widget class="QLabel" name="rechercheLabel">
+         <property name="text">
+          <string>Rechercher</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="rechercheLineEdit"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="rechercherButton">
+         <property name="text">
+          <string>Rechercher</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>C:/Users/MOHA BOUTA/OneDrive - uca.ac.ma/Bureau/algotithme_project/img/search_icon.png</normaloff>
+          </iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="resultatListWidget"/>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="affichageGroupBox">
+      <property name="title">
+       <string>Livres Disponibles et Empruntés</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayoutAffichage">
+       <item>
+        <widget class="QTableWidget" name="disponiblesTableWidget">
+         <column>
+          <property name="text">
+           <string>ID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Titre</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Auteur</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="empruntesTableWidget">
+         <column>
+          <property name="text">
+           <string>ID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Titre</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Auteur</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="triGroupBox">
+      <property name="title">
+       <string>Trier les Livres</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayoutTri">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayoutRadioButtons">
+         <item>
+          <widget class="QRadioButton" name="triIdRadioButton">
+           <property name="text">
+            <string>Trier par ID</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="triTitreRadioButton">
+           <property name="text">
+            <string>Trier par Titre</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="triAuteurRadioButton">
+           <property name="text">
+            <string>Trier par Auteur</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="trierButton">
+         <property name="text">
+          <string>Trier</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>C:/Users/MOHA BOUTA/OneDrive - uca.ac.ma/Bureau/algotithme_project/img/sort_icon.png</normaloff>
+          </iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>877</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <addaction name="menuFichier"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+
+
+
+
